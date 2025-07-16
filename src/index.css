@@ -6,6 +6,22 @@
     @tailwind components;
     @tailwind utilities;
 
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background-color: #B6B09F;
+
+    }
+
+    /* index.css */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+
     /* ✅ Then your custom styles */
     * {
       margin: 0;
@@ -234,8 +250,9 @@
     .animate-orbit {
       animation: orbit 20s linear infinite;
     }
+
     @layer utilities {
-  .animate-spin-slow {
-    animation: spin 18s linear infinite;
-  }
-}
+      .animate-spin-slow {
+        animation: spin 18s linear infinite;
+      }
+    }

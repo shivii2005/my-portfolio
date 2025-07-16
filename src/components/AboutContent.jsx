@@ -25,6 +25,7 @@ const AboutContent = () => {
                 <h1 className=" font-inter text-4xl sm:text-5xl font-medium text-[#222222] dark:text-white">
                     About Me
                 </h1>
+                <div className="mt-2 h-[3px] w-12 bg-[#7B7B7B] mx-auto rounded-full" />
             </motion.div>
 
             {/* ✅ Flexbox Two-Column Layout */}

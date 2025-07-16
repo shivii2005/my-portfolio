@@ -6,6 +6,9 @@ const config = {
   ],
   theme: {
     extend: {
+      width: {
+        '95p': '95%',
+      },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
@@ -24,7 +27,12 @@ const config = {
       },
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      scrollbar: ['dark'], // Enables dark mode support for custom scrollbar
+    },
+  },
+  plugins: [], // ❌ Removed 'tailwind-scrollbar'
 };
 
 export default config;

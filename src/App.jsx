@@ -7,6 +7,7 @@ import ProjectSection from "./components/ProjectSection";
 import ContactSection from "./components/ContactSection";
 import { Element } from "react-scroll";
 import "swiper/css";
+import Certificate from "./components/Certificate";
 
 function App() {
   useEffect(() => {
@@ -40,6 +41,10 @@ function App() {
 
       <Element name="skills">
         <section id="skills"><Skills /></section>
+      </Element>
+
+      <Element name="certificate">
+        <section id="certificate"><Certificate/></section>
       </Element>
 
       <Element name="projects">

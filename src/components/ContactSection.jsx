@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   FaEnvelope,
   FaLinkedin,
@@ -13,6 +13,8 @@ import {
 } from "react-icons/fa";
 import { useAnimate } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import WaitlistModal from "./WaitlistModal"; // ✅ ensure correct path
+
 
 const NO_CLIP = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
 const BOTTOM_RIGHT_CLIP = "polygon(0 0, 100% 0, 0 0, 0% 100%)";
@@ -78,29 +80,27 @@ const LinkBox = ({ Icon, href }) => {
     </a>
   );
 };
-
 const ContactSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = (e, formRef) => {
     emailjs
       .sendForm(
         "service_e45hbbq",
         "template_u9h6f8i",
-        form.current,
+        formRef.current,
         "6Maew-xFO9FC7mT8O"
       )
-      .then(
-        (result) => {
-          alert("Thank you! You’ve joined the waitlist.");
-          form.current.reset();
-        },
-        (error) => {
-          alert("Oops! Something went wrong.");
-        }
-      );
+      .then(() => {
+        alert("Thank you! You’ve joined the waitlist.");
+        if (formRef.current) formRef.current.reset(); // ✅ avoid crash
+      })
+      .catch(() => {
+        alert("Oops! Something went wrong.");
+      });
   };
+
 
   return (
     <section
@@ -111,29 +111,27 @@ const ContactSection = () => {
         <p className="text-sm text-[#7B7B7B] dark:text-gray-400">Get in Touch</p>
         <h1 className="text-4xl sm:text-5xl mb-10 font-semibold text-[#222] dark:text-white">
           Contact Me
+          <div className="mt-2 h-[3px] w-12 bg-[#7B7B7B] mx-auto rounded-full" />
         </h1>
+
       </div>
 
-      {/* Waitlist Form */}
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="flex flex-col sm:flex-row items-center w-full max-w-md gap-3 p-1 mb-12 rounded-full shadow-md bg-[#e0e0e0] dark:bg-[#1a1a1a]"
-      >
-        <input
-          type="email"
-          name="user_email"
-          placeholder="Enter your email"
-          required
-          className="flex-1 px-4 py-2 bg-transparent text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none  "
-        />
+      {/* Waitlist Trigger Button */}
+      <div className="mb-12">
         <button
-          type="submit"
-          className="px-5 py-2 font-semibold text-white bg-[#222] dark:bg-white dark:text-black rounded-full transition-all hover:scale-105"
+          onClick={() => setIsModalOpen(true)}
+          className="text-sm sm:text-base bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-lg font-medium border border-black dark:border-white hover:bg-transparent dark:hover:bg-transparent hover:text-inherit dark:hover:text-inherit transition-all duration-300 shadow-md ms-auto flex items-center gap-2"
         >
-          Join Waitlist
+          Connect With Me
         </button>
-      </form>
+      </div>
+
+      <WaitlistModal
+        isOpen={isModalOpen}
+        setIsOpen={setIsModalOpen}
+        sendEmail={sendEmail}
+      />
+
 
       {/* Social Icons Grid */}
       <div className="divide-y divide-[#B6B09F] border border-[#B6B09F] w-full max-w-5xl">

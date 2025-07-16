@@ -32,7 +32,8 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
-  const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
+  const navItems = ["Home", "About", "Skills", "Certificate", "Projects", "Contact"];
+
 
   return (
     <div
@@ -57,7 +58,9 @@ const Navbar = () => {
 
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-8 lg:gap-12 items-center">
+        {/* Desktop Navigation */}
+        <ul className="hidden lg:flex gap-8 xl:gap-12 items-center border-2 border-black dark:border-white px-6 py-2 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-sm">
+
           {navItems.map((item, idx) => (
             <li key={idx} className="relative group">
               <ScrollLink
@@ -91,7 +94,9 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Icon */}
-        <div className="md:hidden z-[100] cursor-pointer" onClick={handleClick}>
+        {/* Mobile Icon */}
+        <div className="lg:hidden z-[100] cursor-pointer" onClick={handleClick}>
+
           {click ? (
             <FaTimes size={24} className="text-[#222222] dark:text-white " />
           ) : (
@@ -101,10 +106,12 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
+      {/* Mobile Navigation */}
       <ul
-        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-[#F8F8F8] dark:bg-[#111111] flex flex-col items-center justify-center gap-8 text-xl transition-transform duration-500 z-40 ${click ? "translate-x-0" : "-translate-x-full"
+        className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-[#F8F8F8] dark:bg-[#111111] flex flex-col items-center justify-center gap-8 text-xl transition-transform duration-500 z-40 ${click ? "translate-x-0" : "-translate-x-full"
           }`}
       >
+
         {navItems.map((item, idx) => (
           <li key={idx}>
             <ScrollLink
