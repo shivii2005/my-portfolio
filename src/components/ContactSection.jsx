@@ -14,6 +14,8 @@ import {
 import { useAnimate } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import WaitlistModal from "./WaitlistModal"; // ✅ ensure correct path
+// import { FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 
 const NO_CLIP = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
@@ -150,8 +152,9 @@ const ContactSection = () => {
         </div>
         <div className="grid grid-cols-3 divide-x divide-[#B6B09F]">
           <LinkBox Icon={FaTelegram} href="https://t.me/shiviigii" />
-          <LinkBox Icon={FaDiscord} href="#" />
-          <LinkBox Icon={FaFacebook} href="https://facebook.com" />
+
+          <LinkBox Icon={FaGithub} href="https://github.com/shivii2005" />
+          <LinkBox Icon={SiLeetcode} href="https://leetcode.com/Monuu05" />
         </div>
       </div>
 
