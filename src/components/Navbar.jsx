@@ -47,8 +47,8 @@ const Navbar = () => {
 
         <div className="flex items-center gap-2 text-[#222222] dark:text-white text-2xl font-medium tracking-wide">
           {/* Icon: always visible, centered text inside */}
-          <div className="w-12 h-12 bg-[#585757] rounded-2xl text-white flex items-center justify-center dark:bg-white dark:text-black">
-            S
+          <div className="w-4 h-4 bg-[#585757] rounded-full text-white flex items-center justify-center dark:bg-white dark:text-black">
+
           </div>
 
           {/* Text: hidden on small screens (shown on md and up) */}
@@ -57,9 +57,9 @@ const Navbar = () => {
 
 
 
+
         {/* Desktop Navigation */}
-        {/* Desktop Navigation */}
-        <ul className="hidden lg:flex gap-8 xl:gap-12 items-center border-2 border-black dark:border-white px-6 py-2 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-sm">
+        <ul className="hidden lg:flex gap-6 xl:gap-10 items-center border-2 border-black dark:border-white px-6 py-2 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-sm">
 
           {navItems.map((item, idx) => (
             <li key={idx} className="relative group">

@@ -22,18 +22,20 @@ const ProjectSection = () => {
       </motion.div>
 
       {/* Vertical scroll container */}
-      <div className="max-w-xl mx-auto h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#B6B09F]/70 scrollbar-track-transparent">
+      <div className="h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#B6B09F]/70 scrollbar-track-transparent" style={{ scrollbarWidth: "none" }}>
         <div className="flex flex-col gap-6">
           {ProjectCardData.map((val, index) => (
-            <div key={index} className="flex justify-center">
+            <div key={index} className="flex justify-center mt-11" >
               <ProjectCard
                 imgsrc={val.imgsrc}
                 title={val.title}
-                text={val.text}
+                description={val.description}
+                features={val.features}
                 live={val.live}
                 github={val.github}
                 tags={val.tags}
               />
+
             </div>
           ))}
         </div>

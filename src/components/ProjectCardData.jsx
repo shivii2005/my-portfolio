@@ -1,40 +1,46 @@
+import chat1 from "../assets/chat1.png";
+import chat2 from "../assets/chat2.png";
+import chat3 from "../assets/chat3.png";
+import chat4 from "../assets/chat4.png";
+import chat5 from "../assets/chat5.png";
 import proj1 from "../assets/profile2.jpg";
 import proj2 from "../assets/profile2.jpg";
-import proj3 from "../assets/profile2.jpg";
 
 const ProjectCardData = [
   {
-    imgsrc: proj1,
-    title: "Portfolio Website",
+    imgsrc: [chat1, chat2, chat3, chat4, chat5],
+    title: "Chat App",
     subtitle: "Personal Developer Portfolio",
-    description: "A modern portfolio using React, showcasing skills, projects, and contact information with animations.",
+    description: "A modern real-time chat application built with React and Supabase, supporting authentication, live chat, and profile management with smooth UX transitions.",
     features: [
-      "Animated transitions using Framer Motion",
-      "Responsive and mobile-friendly",
-      "Contact form with EmailJS integration",
-      "Project showcase with tech stack tags"
+      "User authentication with Supabase (Sign Up / Login)",
+      "Conditional redirect to profile setup after first login",
+      "Real-time chat using Supabase Database",
+      "Profile update with avatar upload (Supabase Storage)",
+      "Logout functionality with session handling",
+
     ],
-    live: "https://myportfolio.com",
-    github: "https://github.com/myportfolio",
-    tags: ["React", "Tailwind", "Framer Motion"]
+    //live: "https://myportfolio.com",
+    github: "https://github.com/shivii2005/chat-app",
+    tags: ["Vite", "Tailwind", "Framer Motion"]
   },
   {
-    imgsrc: proj2,
-    title: "Blog App",
+    imgsrc: [proj1, proj2],
+    title: "Paste App",
     subtitle: "MERN Stack Blogging Platform",
-    description: "A full-stack blog application where users can create, edit, and delete posts with authentication.",
+    description: "A modern paste manager built with React, Redux Toolkit, Tailwind CSS, and localStorage. Features create, update, delete, search, copy, and share pastes with toast notifications and minimal UI.",
     features: [
-      "User authentication and authorization",
-      "Rich text editor for blog posts",
-      "MongoDB-powered database",
-      "Modern UI using Tailwind CSS"
+      "Create, update, and delete pastes",
+      "Search and copy pastes",
+      "Toast notifications",
+      "Data saved with localStorage"
     ],
-    live: "https://example.com/",
-    github: "https://github.com/myportfolio/blog-app",
-    tags: ["React", "Tailwind", "Framer Motion", "Node", "MongoDB"]
+    // live: "https://example.com/",
+    github: "https://github.com/shivii2005/paste-app",
+    tags: ["Vite", "Tailwind", "Redux Toolkit", "React Router", "Framer Motion"]
   },
   {
-    imgsrc: proj3,
+    imgsrc: [proj1, proj2],
     title: "Second Portfolio Site",
     subtitle: "Alternate Personal Portfolio",
     description: "An alternate design of the personal portfolio built using React and Tailwind CSS.",
@@ -44,12 +50,12 @@ const ProjectCardData = [
       "Showcase of resume and GitHub",
       "Smooth scrolling navigation"
     ],
-    live: "https://portfolio.com/",
+    // live: "https://portfolio.com/",
     github: "https://github.com/myportfolio/second-portfolio",
     tags: ["React", "Tailwind", "Framer Motion"]
   },
   {
-    imgsrc: proj3,
+    imgsrc: [proj1, proj2],
     title: "Blog Platform",
     subtitle: "Full-stack Blog Website",
     description: "A scalable blog site built with MERN stack, providing interactive UI and backend integration.",
@@ -59,7 +65,7 @@ const ProjectCardData = [
       "JWT-based authentication",
       "RESTful APIs using Express.js"
     ],
-    live: "https://your-blog.com",
+    //  live: "https://your-blog.com",
     github: "https://github.com/your-blog",
     tags: ["React", "Node", "MongoDB"]
   }

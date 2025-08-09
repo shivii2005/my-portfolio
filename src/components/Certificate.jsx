@@ -28,7 +28,6 @@ const Certificate = () => {
         currentScroll = 0;
       }
     };
-
     const interval = setInterval(scroll, 16); // smooth scroll
     return () => clearInterval(interval);
   }, []);

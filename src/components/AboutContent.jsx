@@ -1,9 +1,10 @@
 import React from "react";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
-import { FaMapMarkerAlt, FaPhoneAlt, FaDownload, FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import AboutImage from "../assets/profile2.jpg";
+import { DownloadIcon } from "lucide-react";
 
 
 
@@ -135,11 +136,15 @@ const AboutContent = () => {
 
                         {/* ✅ Button in Same Line */}
                         <a
-                            href="/Resume.pdf"
+                            href="/SHIVANGI_GOUTAM.pdf"
                             download
-                            className="text-sm sm:text-base bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-lg font-medium border border-black dark:border-white hover:bg-transparent dark:hover:bg-transparent hover:text-inherit dark:hover:text-inherit transition-all duration-300 shadow-md ms-auto flex items-center gap-2"
+                            className="text-sm sm:text-base px-4 py-2 font-medium border transition-all duration-300 
+  flex items-center gap-2 ms-auto
+  text-black border-black hover:bg-black hover:text-white
+  dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+
                         >
-                            <FaDownload className="text-base" />
+                            <DownloadIcon className="text-base" />
                             Download CV
                         </a>
 

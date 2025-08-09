@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import animationData from "../assets/space-dev.json";
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import { DownloadIcon } from "lucide-react";
 
 const HomeSection = () => {
   return (
@@ -90,14 +91,20 @@ const HomeSection = () => {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="mt-6"
             >
-              {/* <a
-                href="/Resume.pdf"
+              <a
+                href="/SHIVANGI_GOUTAM.pdf"
                 download
-                className="text-sm sm:text-base bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-lg font-medium border border-black dark:border-white hover:bg-transparent dark:hover:bg-transparent hover:text-inherit dark:hover:text-inherit transition-all duration-300 shadow-md inline-flex items-center gap-2"
+                className="w-48 mt-10 text-sm sm:text-base px-4 py-2 font-medium border transition-all duration-300 flex items-center gap-2
+  text-black border-black bg-transparent hover:bg-black hover:text-white
+  dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+
               >
-                <FaDownload className="text-base" />
+                <DownloadIcon className="text-sm" />
                 Download CV
-              </a> */}
+              </a>
+
+
+
             </motion.div>
           </div>
         </div>

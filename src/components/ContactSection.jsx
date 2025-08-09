@@ -143,20 +143,20 @@ const ContactSection = () => {
           />
         </div>
         <div className="grid grid-cols-4 divide-x divide-[#B6B09F]">
-          <LinkBox Icon={FaWhatsapp} href="https://wa.me/919999999999" />
-          <LinkBox Icon={FaInstagram} href="https://instagram.com" />
-          <LinkBox Icon={FaSnapchatGhost} href="#" />
-          <LinkBox Icon={FaTwitter} href="https://twitter.com" />
+          <LinkBox Icon={FaWhatsapp} href="https://wa.me/917645078945" />
+          <LinkBox Icon={FaInstagram} href="https://www.instagram.com/imshivii__?" />
+          <LinkBox Icon={FaSnapchatGhost} href="https://www.snapchat.com/add/monshigoutam?" />
+          <LinkBox Icon={FaTwitter} href="https://x.com/goutam_shi64721?t=CSD85Ch4ODCVLv4poBLEpQ&s=09" />
         </div>
         <div className="grid grid-cols-3 divide-x divide-[#B6B09F]">
-          <LinkBox Icon={FaTelegram} href="#" />
+          <LinkBox Icon={FaTelegram} href="https://t.me/shiviigii" />
           <LinkBox Icon={FaDiscord} href="#" />
           <LinkBox Icon={FaFacebook} href="https://facebook.com" />
         </div>
       </div>
 
       {/* Footer */}
-      <div className="mt-16 text-sm text-[#888] dark:text-gray-500 text-center">
+      <div className="mt-16 text-base text-[#888] dark:text-gray-500 text-center">
         &copy; 2025 Shivangi Goutam. All rights reserved.
       </div>
     </section>
