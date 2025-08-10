@@ -15,7 +15,7 @@ const WaitlistModal = ({ isOpen, setIsOpen, sendEmail }) => {
                     exit={{ opacity: 0 }}
                 >
                     <motion.div
-                        className="relative bg-[#f8f8f8] dark:bg-[#1a1a1a] text-[#222] dark:text-white rounded-xl shadow-xl w-full max-w-5xl mx-auto overflow-hidden flex flex-col md:flex-row"
+                        className="relative bg-[#f8f8f8] dark:bg-[#1a1a1a] text-[#222] dark:text-white rounded-xl shadow-xl w-full max-w-5xl mx-auto overflow-hidden flex flex-col md:flex-row max-h-screen overflow-y-auto"
                         initial={{ scale: 0.95, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.95, opacity: 0 }}
@@ -31,12 +31,14 @@ const WaitlistModal = ({ isOpen, setIsOpen, sendEmail }) => {
 
                         {/* Left Panel - Info */}
                         <div className="flex-1 p-5 sm:p-6 bg-[#7b7b7b] dark:bg-[#7b7b7b]">
-                            <h2 className="text-2xl font-bold dark:text-black mt-10 ml-[30%] tracking-wide">Contact Info</h2>
-                            <p className="text-base text-gray-800 dark:text-gray-200 mt-5 ml-14 tracking-wide leading-relaxed">
+                            <h2 className="text-2xl font-bold dark:text-black mt-4 md:mt-10 md:ml-[30%] tracking-wide">
+                                Contact Info
+                            </h2>
+                            <p className="text-base text-gray-800 dark:text-gray-200 mt-3 md:mt-5 md:ml-14 tracking-wide leading-relaxed">
                                 Have a question or idea? Let’s connect!
                             </p>
 
-                            <div className="mt-8 ml-10 space-y-6 text-black dark:text-white text-base tracking-wide">
+                            <div className="mt-6 md:mt-8 md:ml-10 space-y-6 text-black dark:text-white text-base tracking-wide">
                                 {/* Location */}
                                 <div className="flex items-center gap-3">
                                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -61,8 +63,8 @@ const WaitlistModal = ({ isOpen, setIsOpen, sendEmail }) => {
                                     <span>shivangigoutam06@gmail.com</span>
                                 </div>
                             </div>
-
                         </div>
+
 
                         {/* Right Panel - Form */}
                         <form
@@ -71,7 +73,7 @@ const WaitlistModal = ({ isOpen, setIsOpen, sendEmail }) => {
                                 e.preventDefault();
                                 sendEmail(e, formRef);
                             }}
-                            className="flex-1 p-5 sm:p-6 flex flex-col gap-4"
+                            className="flex-1 p-5 sm:p-6 flex flex-col gap-4 pb-8"
                         >
                             <h2 className="text-2xl font-bold tracking-wide">Get in Touch</h2>
 
